@@ -28,3 +28,7 @@ switch (roleNames[i]){
 	}
 }
 setAttributeArray('https://aws.amazon.com/SAML/Attributes/Role', attrArray);
+
+/* set SessionDuration to 8 hours */
+/* https://blogs.aws.amazon.com/security/post/Tx3GL3IZE3FIGB6/Enable-Your-Federated-Users-to-Work-in-the-AWS-Management-Console-for-up-to-12-H */
+setCustomAttribute('https://aws.amazon.com/SAML/Attributes/SessionDuration', 'SessionDuration', '28800');
