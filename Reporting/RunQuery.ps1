@@ -2,13 +2,16 @@
 # Created by Blooodorange
 # Version 1.0
 
+# Inputs
+
 $Username = ""
 $Password = ""
 $Pod = "https://customer.my.centrify.com"
 $Query = "SELECT EventType, WhenOccurred, NormalizedUser, UserName, AuthMethod, Factors, FromIPAddress, RequestDeviceOS FROM event WHERE EventType = 'Cloud.Core.Login' AND WhenOccurred BETWEEN dateFunc('2016-08-26 11:00') AND dateFunc('2016-08-27 11:00')"
 
-# Function Login
-Function Login(){
+# Function GetAuthToken
+
+Function GetAuthToken(){
     param(
         [Parameter(Mandatory=$true)]
         $Username,
@@ -24,8 +27,9 @@ Function Login(){
     return $ASPXAuth
 }
 
-# Function Query
-Function Query(){
+# Function QueryReporting
+
+Function QueryReporting(){
     param(
         [Parameter(Mandatory=$true)]
         $Auth,
@@ -42,11 +46,11 @@ Function Query(){
     return $Query.Result
 }
 
-# Login to API
-$AuthToken = Login -Username $Username -Password $Password -Pod $Pod
-
 # Query and Out-GridView results
-$Result = Query -Auth $AuthToken -QueryJson "{""Script"":""$Query""}" -Pod $Pod
+
+$AuthToken = GetAuthToken -Username $Username -Password $Password -Pod $Pod
+
+$Result = QueryReporting -Auth $AuthToken -QueryJson "{""Script"":""$Query""}" -Pod $Pod
 $Result.Results | Select-Object -ExpandProperty Row | Select WhenOccurred, EventType, NormalizedUser, UserName, AuthMethod, Factors, FromIPAddress, RequestDeviceOS | Out-GridView
 
 # Cleanup variables

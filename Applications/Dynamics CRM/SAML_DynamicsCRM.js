@@ -1,3 +1,5 @@
+/* Dynamics CRM - Custom SAML script for Centrify's generic WS-Fed app template  */
+
 /* Code - Start */
 
 /* myServiceUrl contains ACS Endpoint 

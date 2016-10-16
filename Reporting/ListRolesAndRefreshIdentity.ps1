@@ -105,7 +105,7 @@ Function RefreshIdentity(){
     return $Query.Result
 }
 
-# Query CIS
+# Query roles and refresh identity
 
 Write-Host "`n"
 

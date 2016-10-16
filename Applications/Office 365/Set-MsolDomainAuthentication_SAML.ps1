@@ -1,4 +1,5 @@
-﻿# https://msdn.microsoft.com/en-us/library/azure/dn641269.aspx
+﻿# Set-MsolDomainAuthentication_SAML.ps1
+# https://msdn.microsoft.com/en-us/library/azure/dn641269.aspx
 # https://technet.microsoft.com/library/dn194112.aspx
 # https://developer.salesforce.com/page/Configuring-SAML-SSO-to-Office365
 # https://ping.force.com/Support/Office-365-Switching-the-federation-protocol-to-SAML-from-WS-Federation
