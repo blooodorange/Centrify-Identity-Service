@@ -1,30 +1,30 @@
-/* Dynamics CRM - Custom SAML script for Centrify's generic WS-Fed app template  */
+// Dynamics CRM - Custom SAML script for Centrify's generic WS-Fed app template
 
-/* Code - Start */
+// Code - Start
 
-/* myServiceUrl contains ACS Endpoint 
-** from CRM Claims-Based Authentication
-** Please avoid trailing slash in the Service URL
+/*
+myServiceUrl contains ACS Endpoint from CRM Claims-Based Authentication
+Please avoid trailing slash in the Service URL
 */
 var myServiceUrl = ServiceUrl;
 
-/* Specify external URL */
+// Specify external URL
 var externalUrl = "https://crmauth.domain.com";
 
 var wtrealm = Request["wtrealm"];
 
-/* For IFD - Start */
+// For IFD - Start
 if(wtrealm != null) {
-  	/* For SP - Start */
-  	if (wtrealm.indexOf(ServiceUrl) == -1) { /* If accessed with IFD enabled */
+  	// For SP - Start
+  	if (wtrealm.indexOf(ServiceUrl) == -1) {	// If accessed with IFD enabled
   		myServiceUrl = externalUrl;
 	}
-  	/* For SP - End */
+  	// For SP - End
 } else {
-  	/* For IdP - Start */
+  	// For IdP - Start
   	var orgname = Request["org"];
   	if(orgname != null) {
-	  	/* Replacing Organization Name with host name */
+	  	// Replacing Organization Name with host name
 		var ServiceUrlSplitArr = ServiceUrl.split("/");
 		var hostUrlSplitArr = ServiceUrlSplitArr[2].split(".");
 		hostUrlSplitArr[0] = orgname;
@@ -34,9 +34,9 @@ if(wtrealm != null) {
   	} else {
 		setWctx("ru=%2fdefault.aspx");
   	}
-	/* For IdP - End */
+	// For IdP - End
 }
-/* Code - End */
+// Code - End
 
 setAudience(myServiceUrl);
 setRecipient(myServiceUrl);
@@ -49,7 +49,7 @@ setSubjectName(LoginUser.Username);
 setAuthenticationMethod('urn:federation:authentication:windows');
 setSignatureType('Assertion');
 
-/* Required claims */
+// Required claims
 setCustomAttribute('name', 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims', LoginUser.DisplayName);
 setCustomAttribute('upn', 'http://schemas.xmlsoap.org/ws/2005/05/identity/claims', LoginUser.Username);
 addSubjectToAttrStatement("True");

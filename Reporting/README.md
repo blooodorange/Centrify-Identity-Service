@@ -9,6 +9,6 @@
 ## RunQuery.ps1
 * Executes a SQL query
 
-Samples: [ReportingQueries.sql](https://github.com/blooodorange/Centrify-Identity-Service/blob/master/Reporting/RunQuery.ps1)
+Samples: [ReportingQueries.sql](https://github.com/blooodorange/Centrify-Identity-Service/blob/master/Reporting/ReportingQueries.sql)
 
 [Using queries](http://developer.centrify.com/site/global/documentation/api_guide/using_queries/index.gsp)

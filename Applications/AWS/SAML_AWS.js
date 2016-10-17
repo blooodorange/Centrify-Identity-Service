@@ -1,4 +1,4 @@
-/* Amazon Web Services - Custom SAML 2.0 script for Centrify's generic app template  */
+// Amazon Web Services - Custom SAML 2.0 script for Centrify's generic app template
 
 setVersion('2');
 setIssuer(Issuer);
@@ -10,11 +10,12 @@ setServiceUrl(ServiceUrl);
 setHttpDestination(ServiceUrl);
 setNameFormat('persistent');
 
-/* Attribute: RoleSessionName */
+// Attribute: RoleSessionName
 setAttribute('https://aws.amazon.com/SAML/Attributes/RoleSessionName', LoginUser.Username);
 
-/* Attribute: Role
-** http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html
+/*
+Attribute: Role
+http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html
 */
 var roleNames = LoginUser.RoleNames;
 var attrArray = new Array();
@@ -32,7 +33,8 @@ switch (roleNames[i]){
 }
 setAttributeArray('https://aws.amazon.com/SAML/Attributes/Role', attrArray);
 
-/* set SessionDuration to 8 hours
-** https://blogs.aws.amazon.com/security/post/Tx3GL3IZE3FIGB6/Enable-Your-Federated-Users-to-Work-in-the-AWS-Management-Console-for-up-to-12-hours
+/*
+set SessionDuration to 8 hours
+https://blogs.aws.amazon.com/security/post/Tx3GL3IZE3FIGB6/Enable-Your-Federated-Users-to-Work-in-the-AWS-Management-Console-for-up-to-12-hours
 */
 setCustomAttribute('https://aws.amazon.com/SAML/Attributes/SessionDuration', 'SessionDuration', '28800');

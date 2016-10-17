@@ -1,4 +1,4 @@
-/* Office 365 - Custom SAML 2.0 script for Centrify's generic app template  */
+// Office 365 - Custom SAML 2.0 script for Centrify's generic app template
 
 function guidToBase64(guidString, littleEndian) { var hexlist = '0123456789abcdef'; var b64list = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
 
