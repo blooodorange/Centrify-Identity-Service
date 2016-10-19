@@ -2,6 +2,7 @@
 ReportingQueries.sql
 http://developer.centrify.com/site/global/documentation/api_guide/data_dictionary/index.gsp
 */
+
 -- Count: Total users on tenant
 SELECT count(*) AS Count FROM User
 
