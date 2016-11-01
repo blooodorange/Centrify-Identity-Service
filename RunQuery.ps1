@@ -1,5 +1,5 @@
 ﻿# RunQuery.ps1
-# Created by Blooodorange
+# Created by Martin Walder
 # Version 1.0
 
 # Inputs

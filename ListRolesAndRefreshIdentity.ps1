@@ -1,5 +1,5 @@
 ﻿# ListRolesAndRefreshIdentity.ps1
-# Created by Blooodorange
+# Created by Martin Walder
 # Version 1.0
 # http://developer.centrify.com/site/global/documentation/api_reference/index.gsp
 # https://github.com/centrify/centrify-samples-powershell
