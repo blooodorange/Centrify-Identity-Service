@@ -13,10 +13,12 @@ Samples: [ReportingQueries.sql](https://github.com/blooodorange/Centrify-Identit
 
 [Using queries](http://developer.centrify.com/site/global/documentation/api_guide/using_queries/index.gsp)
 
+
 # Monitoring
 
 ## CISCheckIWA.ps1
 * Sample script to check Cloud Connector's Integrated Windows Authentication functionality
+
 
 # Application Integrations
 
@@ -30,3 +32,4 @@ Enable SAML 2.0 passive authentication in Office 365: [Set-MsolDomainAuthenticat
 
 ## SAML_AWS.js
 * Custom SAML script to connect Amazon Web Services Console (SAML 2.0)
+* AWS role mapping based on role membership in Centrify Identity Service
