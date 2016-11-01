@@ -13,12 +13,14 @@ Samples: [ReportingQueries.sql](https://github.com/blooodorange/Centrify-Identit
 
 [Using queries](http://developer.centrify.com/site/global/documentation/api_guide/using_queries/index.gsp)
 
+---
 
 # Monitoring
 
 ## CISCheckIWA.ps1
 * Sample script to check Cloud Connector's Integrated Windows Authentication functionality
 
+---
 
 # Application Integrations
 
