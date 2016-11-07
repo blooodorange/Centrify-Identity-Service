@@ -61,3 +61,9 @@ WHERE WhenOccurred >= DateFunc('now', '-X')
 AND EventType='Cloud.Saas.Application.AppLaunch'
 GROUP BY Name
 ORDER BY Count DESC
+
+-- Current time
+SELECT time('now')
+
+-- Current date and time
+SELECT datetime('now')

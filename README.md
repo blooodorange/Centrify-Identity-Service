@@ -33,3 +33,6 @@ Enable SAML 2.0 passive authentication in Office 365: [Set-MsolDomainAuthenticat
 ### SAML_AWS.js
 * Custom SAML script to connect Amazon Web Services Console (SAML 2.0)
 * AWS role mapping based on role membership in Centrify Identity Service
+
+### [AuthPolicies.js](https://github.com/blooodorange/Centrify-Identity-Service/blob/master/AuthPolicies.js)
+* Sample authentication policies
