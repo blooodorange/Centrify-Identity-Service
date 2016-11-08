@@ -36,3 +36,5 @@ Enable SAML 2.0 passive authentication in Office 365: [Set-MsolDomainAuthenticat
 
 ### [AuthPolicies.js](https://github.com/blooodorange/Centrify-Identity-Service/blob/master/AuthPolicies.js)
 * Sample authentication policies
+
+[Application access policies with JavaScript](https://docs.centrify.com/en/centrify/appref/index.html?version=99#page/cloudhelp%2Fscripts%2Fcloud-appconfig-jsauth.html)
