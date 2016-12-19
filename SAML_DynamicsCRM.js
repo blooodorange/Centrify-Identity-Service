@@ -1,4 +1,4 @@
-// Dynamics CRM - Custom SAML script for Centrify's generic WS-Fed app template
+// Dynamics CRM - Custom SAML script for Centrify's Dynamics CRM app
 
 // Code - Start
 
